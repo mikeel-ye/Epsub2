@@ -58,7 +58,7 @@
       "value": "<b>Hello {first}\n\nAnda harus bergabung di Channel/Grup saya untuk menggunakan saya\n\nSilakan Join Ke Channel Terlebih Dahulu</b>"
    } 
   },
-  "addons": [
+      "addons": [
     {
     "plan": "heroku-postgresql",
       "options": {
@@ -69,12 +69,15 @@
   "buildpacks": [
     {
       "url": "heroku/python"
+    },
+    {
+      "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
     }
   ],
   "formation": {
-    "worker": {
+    "ayiin": {
       "quantity": 1,
-      "size": "eco"
+      "size": "basic"
     }
   }
 }
